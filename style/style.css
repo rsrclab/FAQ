@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+html,
+body {
+  margin: 0;
+  font-family: 'Kumbh Sans', sans-serif; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, p {
+  margin: 0; }
+
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #af67e9, #6565e7);
+  padding: 20px; }
+
+.faq-section {
+  position: fixed;
+  display: flex;
+  padding: 70px 0;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 920px;
+  background-color: white;
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-position: left -350px bottom -100px;
+  background-size: 750px;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transform: translate(-50%, -50%); }
+  .faq-section > div {
+    flex: 0 0 50%;
+    max-width: 50%; }
+  .faq-section .image {
+    position: relative; }
+    .faq-section .image figure {
+      overflow: hidden;
+      margin: 0; }
+      .faq-section .image figure img {
+        max-width: 100%; }
+    .faq-section .image .img-desktop {
+      margin-left: -60px; }
+    .faq-section .image .img-mobile {
+      display: none; }
+    .faq-section .image .img-box {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      animation: bounceUpDown 1s ease-in-out 0s infinite alternate; }
+  .faq-section .content {
+    padding-right: 70px; }
+    .faq-section .content .title {
+      margin-bottom: 40px;
+      font-size: 32px; }
+
+.accordion {
+  margin: 0;
+  height: 300px;
+  overflow-y: auto; }
+  .accordion-header {
+    position: relative;
+    color: #1d1e35;
+    font-size: 16px;
+    padding: 15px 20px 15px 0;
+    border-bottom: 1px solid #e7e7e9;
+    cursor: pointer;
+    transition: all .3s ease-in-out; }
+    .accordion-header::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      right: 0;
+      width: 15px;
+      height: 15px;
+      background: url(../images/icon-arrow-down.svg) no-repeat center;
+      background-size: contain;
+      transform: translate(-50%, -50%);
+      transition: all .3s ease-in-out; }
+    .accordion-header:hover {
+      color: #f47c57; }
+    .accordion-header.active {
+      border-bottom: none;
+      font-weight: 700; }
+      .accordion-header.active::after {
+        transform: translate(-50%, -50%) rotate(180deg); }
+  .accordion-body {
+    display: none;
+    padding-bottom: 20px;
+    margin-left: 0;
+    color: #4a4b5e;
+    font-size: 14px; }
+    .accordion-body.active {
+      display: block;
+      border-bottom: 1px solid #e7e7e9; }
+
+.attribution {
+  margin-top: 10px;
+  font-size: 11px;
+  text-align: center;
+  color: white; }
+  .attribution a {
+    color: white; }
+
+@keyframes bounceUpDown {
+  from {
+    top: 63%; }
+  to {
+    top: 66%; } }
+@media only screen and (max-width: 1200px) {
+  .faq-section {
+    padding: 30px 0;
+    max-width: 760px;
+    background-size: 650px;
+    background-position: left -325px bottom -30px; }
+    .faq-section .image .img-box {
+      width: 120px; }
+    .faq-section .content {
+      padding-right: 20px; }
+
+  @keyframes bounceUpDown {
+    from {
+      top: 50%; }
+    to {
+      top: 53%; } } }
+@media only screen and (max-width: 768px) {
+  .faq-section {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    padding-top: 150px;
+    margin: 150px auto 20px;
+    max-width: 500px;
+    background-image: url("../images/bg-pattern-mobile.svg");
+    background-size: 240px;
+    background-position: top left 55%;
+    transform: none; }
+    .faq-section > div {
+      max-width: 100%; }
+    .faq-section .image {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 300px;
+      transform: translate(-50%, -50%);
+      animation: bounceUpDown 1s ease-in-out 0s infinite alternate; }
+      .faq-section .image .img-desktop {
+        display: none; }
+      .faq-section .image .img-mobile {
+        display: block;
+        margin: auto; }
+      .faq-section .image .img-box {
+        display: none; }
+    .faq-section .content {
+      padding: 0 20px; }
+      .faq-section .content .title {
+        text-align: center;
+        margin-bottom: 20px; }
+    .faq-section .accordion {
+      height: auto; }
+      .faq-section .accordion-header {
+        font-size: 14px; }
+      .faq-section .accordion-body {
+        font-size: 12px;
+        line-height: 1.4; }
+
+  @keyframes bounceUpDown {
+    from {
+      top: -10px; }
+    to {
+      top: 0; } } }
+
+/*# sourceMappingURL=style.css.map */
